@@ -2,6 +2,9 @@
 This tool is for moving in common File structures. The most common use case is
 to switch between implementation and test file.
 
+## Demo
+![Demo](demo.gif)
+
 ## Installation
 Use your favorite plugin manager.
 
