@@ -2,7 +2,6 @@
 You are able to configure jumpwire depending on your project. Here are some defaults.
 To use jumpwire you have to call the setup function. And below here are some common used configurations.
 Be aware that you cannot use overlapping file types at the same time.
-And the order is [important (spec.ts and ts)](#angular)
 
 ## vim
 Put a configuration in the language table.

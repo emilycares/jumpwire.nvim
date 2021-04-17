@@ -5,7 +5,7 @@ M.jump = function (path, config, wanted_destination)
     --print(vim.inspect(config))
     local data = M.get_destination_configuration(path, config, wanted_destination);
 
-    if not data.destination_information or not data.key then
+    if not data or not data.destination_information or not data.key then
         print(vim.inspect('Could not find ' .. wanted_destination .. ' for file ' .. FileAnalyser.get_file_name(path)))
         return
     end
@@ -65,7 +65,9 @@ M.get_destination_configuration = function (path, config, destination)
     for key in pairs(config) do
         if path:sub(-#key) == key then
             local value = config[key]
-            return {destination_information = value[destination], key = key}
+            if value[destination] ~= nil then
+                return {destination_information = value[destination], key = key}
+            end
         end
 
     end
