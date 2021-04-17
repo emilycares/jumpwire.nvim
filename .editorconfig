@@ -1,0 +1,6 @@
+root = true
+
+[*.lua]
+quote_type = single
+indent_style = space
+indent_size = 4
