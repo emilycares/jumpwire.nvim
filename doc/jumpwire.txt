@@ -1,41 +1,47 @@
-# jumpwire Configuration
-You are able to configure jumpwire depending on your project. Here are some defaults.
-To use jumpwire you have to call the setup function. And below here are some common used configurations.
-Be aware that you cannot use overlapping file types at the same time.
+================================================================================
+                                                                      *jumpwire*
+This tool is for moving in common File structures. The most common use case is
+to switch between implementation and test file.
 
-## vim
+To find out more:
+https://github.com/micmine/jumpwire.nvim
+
+jumpwire.setup()                                                *jumpwire.setup*
+
 Put a configuration in the language table inside your init.vim.
-``` vim
 lua require('jumpwire').setup({ language = {
                         \  ['ts'] = {
                         \    test = { type = 'fileExtension', data = 'test.ts'},
                         \    style = { type = 'fileExtension', data = 'css'},
                         \  },
                         \ }})
-```
-## lua
+
 Or into a lua file.
-```lua
 require('jumpwire').setup({ language = {
   ['ts'] = {
     test = { type = 'fileExtension', data = 'test.ts'},
     style = { type = 'fileExtension', data = 'css'},
   },
 }})
-```
 
-## Defaults
-Replace the existing entry inside the language table ( ['ts'] .... ) where 
+Add shortcuts:
+noremap <leader>mt :lua require('jumpwire').jump('test')<CR>
+noremap <leader>mi :lua require('jumpwire').jump('implementation')<CR>
+noremap <leader>mm :lua require('jumpwire').jump('markup')<CR>
+noremap <leader>ms :lua require('jumpwire').jump('style')<CR>
+
+================================================================================
+                                                             *jumpwire.defaults*
+jeplace the existing entry inside the language table ( ['ts'] .... ) where 
 you call the setup function
-- [angular](#angular)
-- [java](#java)
-- [kotlinlang](#kotlinlang)
-- [reactjs](#reactjs)
-- [svelte](#svelte)
-- [vuejs](#vuejs)
+- `angular`
+- `java`
+- `kotlinlang`
+- `reactjs`
+- `svelte`
+- `vuejs`
 
-### angular
-```lua
+                                                     *jumpwire.defaults.angular*
 ['spec.ts'] = {
   implementation = { type = 'fileExtension', data = 'ts'},
   markup = { type = 'fileExtension', data = 'html'},
@@ -56,26 +62,20 @@ you call the setup function
   test = { type = 'fileExtension', data = 'spec.ts'},
   markup = { type = 'fileExtension', data = 'html'},
 },
-```
 
-### java
-```lua
+                                                        *jumpwire.defaults.java*
 ['java'] = {
   implementation = { type = 'jvm', data = 'implementation'},
   test = { type = 'jvm', data = 'test'},
 },
-```
 
-### kotlinlang
-```lua
+                                                  *jumpwire.defaults.kotlinlang*
 ['kt'] = {
   implementation = { type = 'jvm', data = 'implementation'},
   test = { type = 'jvm', data = 'test'},
 },
-```
 
-### reactjs
-```lua
+                                                     *jumpwire.defaults.reactjs*
 ['test.ts'] = {
   implementation = { type = 'fileExtension', data = 'ts'},
   style = { type = 'fileExtension', data = 'css'}
@@ -88,10 +88,8 @@ you call the setup function
   implementation = { type = 'fileExtension', data = 'ts'},
   test = { type = 'fileExtension', data = 'test.ts'},
 },
-```
 
-### vuejs
-```lua
+                                                       *jumpwire.defaults.vuejs*
 ['test.ts'] = {
   implementation = { type = 'fileExtension', data = 'ts'},
   markup = { type = 'fileExtension', data = 'vue'},
@@ -108,10 +106,8 @@ you call the setup function
   markup = { type = 'lineContains', data = '<template'},
   style = { type = 'lineContains', data = '<style'}
 },
-```
 
-### svelte
-```lua
+                                                      *jumpwire.defaults.svelte*
 ['test.ts'] = {
   implementation = { type = 'fileExtension', data = 'ts'},
   markup = { type = 'fileExtension', data = 'svelte'},
@@ -128,4 +124,3 @@ you call the setup function
   markup = { type = 'lineContains', data = '<div'},
   style = { type = 'lineContains', data = '<style'}
 },
-```

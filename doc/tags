@@ -1,0 +1,9 @@
+jumpwire	jumpwire.txt	/*jumpwire*
+jumpwire.defaults	jumpwire.txt	/*jumpwire.defaults*
+jumpwire.defaults.angular	jumpwire.txt	/*jumpwire.defaults.angular*
+jumpwire.defaults.java	jumpwire.txt	/*jumpwire.defaults.java*
+jumpwire.defaults.kotlinlang	jumpwire.txt	/*jumpwire.defaults.kotlinlang*
+jumpwire.defaults.reactjs	jumpwire.txt	/*jumpwire.defaults.reactjs*
+jumpwire.defaults.svelte	jumpwire.txt	/*jumpwire.defaults.svelte*
+jumpwire.defaults.vuejs	jumpwire.txt	/*jumpwire.defaults.vuejs*
+jumpwire.setup	jumpwire.txt	/*jumpwire.setup*
