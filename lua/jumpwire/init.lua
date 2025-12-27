@@ -5,7 +5,7 @@ local M = {}
 JumpWireConfig = {}
 
 M.help = function ()
-    print('No language defined for current file https://github.com/micmine/jumpwire.nvim/blob/master/config.md')
+    print('No language defined for current file https://github.com/emilycares/jumpwire.nvim/blob/master/config.md')
 end
 
 M.jump = function (destination)

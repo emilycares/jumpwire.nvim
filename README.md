@@ -8,7 +8,7 @@ to switch between implementation and test file.
 ## Installation
 Use your favorite plugin manager.
 
-1. Add `Plug 'micmine/jumpwire.nvim'` to init.vim
+1. Add `Plug 'emilycares/jumpwire.nvim'` to init.vim
 2. Run `:PlugInstall`
 3. Follow the guide in [config.md](config.md)
 4. Add shortcuts
